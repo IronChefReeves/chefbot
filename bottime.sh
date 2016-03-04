@@ -37,8 +37,12 @@ tail -f .botfile | openssl s_client -connect irc.cat.pdx.edu:6697 | while true ;
     if [[ "$cmd" == "PRIVMSG" ]] ; then
 
         chan="$(echo $irc | cut -d ' ' -f 3)"
+        barf="$(echo $irc | cut -d ' ' -f 1-3)"
         allmsg="$(echo $irc | cut -d ' ' -f 4- | cut -c 2- | tr -d "\r\n")"
-        var="$(echo "$chan $allmsg" | ./commands.sh)"
+        saying="$(echo ${irc##$barf :}|tr -d "\r\n")"
+        nick="${irc%%!*}"
+        nick="${nick#:}"
+        var="$(echo "$chan" "$nick" "$allmsg" | ./commands.sh)"
             if [[ ! -z $var ]] ; then
             send "$var"
             fi
