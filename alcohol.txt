@@ -1,0 +1,18 @@
+vodka
+gin
+tequila
+whiskey
+rye
+bourbon
+rum
+fruit liqueur
+berry liqueur
+chocolate liqueur
+cream liqueur
+coffee liqueur
+crème liqueur
+flower liqueur
+herbal liqueur
+honey liqueur
+nut liqueur
+whisky liqueur

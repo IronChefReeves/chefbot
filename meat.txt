@@ -1,0 +1,7 @@
+Fish
+Shellfish
+Chicken
+Beef
+Pork
+Tofu
+Eggs
