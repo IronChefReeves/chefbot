@@ -39,6 +39,9 @@ fi
 
 if has "$allmsg" "^!hardmode$" ; then say $chan "Alright chef, you asked for it I guess. Your dish needs $(echo $(shuf -n 1 hardmode.txt))."
 fi
+ 
+if has "$nick $allmsg" "Reeves !go$" ; then say $chan "ACTION $(echo $(shuf -n 1 adjectives.txt)) pulls out a $(echo $(shuf -n 1 tool.txt))"
+fi
 
 if has "$allmsg" "^!swedishdrink$" ; then say $chan "Skål!"
 fi
